@@ -3,4 +3,5 @@ a=str(input('enter a string '))
 if a[::-1]==a:
     print('palindrome')
 else:
+    
     print('not palindrome')
