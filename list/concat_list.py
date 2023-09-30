@@ -1,0 +1,11 @@
+list1=[1,2,3]
+list2=[4,5,6]
+c=list1+list2
+print(c)
+print('=============slice=================')
+print(c[1::3])
+print(c[:-1])
+print(c[::-1])
+print(c[-1::])
+print(c[:4])
+print(c[4::])

@@ -1,6 +1,6 @@
 import arith
 select=0
-while select!=5 or select!=5:
+while select!=5 :
     print(''' 
       1.addition
       2.subtraction
