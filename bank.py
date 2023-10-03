@@ -8,9 +8,10 @@ while True:
             Account={}
             N=input("enter your name")
             A=input("enter yopur address")
-            Ag=int(input("enter your age"))
-            C=int(input("enter your contact number"))
+            Ag=(input("enter your age"))
+            C=(input("enter your contact number"))
             print()
+            
     elif choice==2:
             print("Account details")
             Account['Name']=N
