@@ -9,14 +9,14 @@ dict={
         "Address":'',
         "Age":'',
         "Branch":'',
-        "Acc_balance":'',
+        "Acc_balance":0,
         
     }
 
-
+Acc_number=9827
 
 def add_account():
-        Acc_number=9827
+        global Acc_number
         Name=str(input('enter your name'))
         Branch=str(input('branch name'))
         Age=str(input('enter your age'))
@@ -28,9 +28,10 @@ def add_account():
         dict['Age']=Age
         dict['Branch']=Branch
         dict['Acc_balance']=0
-        dict['Acc_numer']=Acc_number
+        dict['Acc_number']=Acc_number
         bank.append(dict.copy())
         Acc_number+=1
+        # print(Acc_number)
        
 
 
@@ -41,16 +42,20 @@ def view_account():
 
 
 def add_balance():
-     
+       b=int(input('enter your account number'))
        a=int(input('enter your amount'))
-    #    Acc_balance=dict['Acc_balance']
+    #  Acc_balance=dict['Acc_balance']
        bank1 =bank.copy()
        for i in bank1:
-            Acc_balance=i['Acc_balance']
-            i.update({"Acc_balance":Acc_balance+a})
-       for dict in bank1:
-        for a,b in dict.items():
-                print(a,':',b)
+                if i['Acc_number']==b:
+                    Acc_balance=i['Acc_balance']
+                    print(Acc_balance+a)
+                    # i.update({"Acc_balance":Acc_balance+a})
+                else:
+                     print('Account number not found')
+                # for dict in bank1:
+                #  for a,b in dict.items():
+                #         print(a,':',b)
 
 
 def withdraw_balance():
