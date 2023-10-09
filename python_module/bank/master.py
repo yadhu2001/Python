@@ -44,35 +44,54 @@ def view_account():
 def add_balance():
        b=int(input('enter your account number'))
        a=int(input('enter your amount'))
-    #  Acc_balance=dict['Acc_balance']
        bank1 =bank.copy()
+       acc_no=[]
        for i in bank1:
-                if i['Acc_number']==b:
-                    Acc_balance=i['Acc_balance']
-                    print(Acc_balance+a)
-                    # i.update({"Acc_balance":Acc_balance+a})
-                else:
-                     print('Account number not found')
-                # for dict in bank1:
-                #  for a,b in dict.items():
-                #         print(a,':',b)
+            acc_no.append(i['Acc_number'])
+       if b in acc_no:
+             
+            for i in bank1:
+                 if i['Acc_number']==b:
+                  Acc_balance=i['Acc_balance']
+                  i.update({"Acc_balance":Acc_balance+a})
+       else:
+            print('Account number not found')
+    #    for i in bank1:
+    #              Acc_balance=i['Acc_balance']
+    #                 # print(Acc_balance+a)
+    #              i.update({"Acc_balance":Acc_balance+a})
+    #              break
+    #         else:
+    #                   print('Account number not found')
+    #             # for dict in bank1:
+    #             #  for a,b in dict.items():
+    #             #         print(a,':',b)
 
 
 def withdraw_balance():
-        Withdraw_Amount=int(input('enter amount to withdraw'))
+        b=int(input('enter your account number'))
+        
         bank1 =bank.copy()
+        acc_no=[]
         for i in bank1:
-            Acc_balance=i['Acc_balance']
-            if Acc_balance>0:
-                if Acc_balance<Withdraw_Amount:
-                    print('in-balance')
-                    break
+            acc_no.append(i['Acc_number'])
+        if b in acc_no:
+         Withdraw_Amount=int(input('enter amount to withdraw'))
+         for i in bank1:
+            if i['Acc_number']==b:
+                Acc_balance=i['Acc_balance']
+                if Acc_balance>0:
+                    if Acc_balance<Withdraw_Amount:
+                        print('in-balance')
+                        break   
+                    else:
+                        i.update({"Acc_balance":Acc_balance-Withdraw_Amount})
                 else:
-                    i.update({"Acc_balance":Acc_balance-Withdraw_Amount})
-            else:
-                    print('insfnt balance')
-                    break
-            for dict in bank1:
-                for x,y in dict.items():
-                    print(x,':',y)
+                        print('insfnt balance')
+                        break
+        else:
+            print('Account number not found')
+            # for dict in bank1:
+            #     for x,y in dict.items():
+            #         print(x,':',y)
 
