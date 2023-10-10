@@ -56,16 +56,6 @@ def add_balance():
                   i.update({"Acc_balance":Acc_balance+a})
        else:
             print('Account number not found')
-    #    for i in bank1:
-    #              Acc_balance=i['Acc_balance']
-    #                 # print(Acc_balance+a)
-    #              i.update({"Acc_balance":Acc_balance+a})
-    #              break
-    #         else:
-    #                   print('Account number not found')
-    #             # for dict in bank1:
-    #             #  for a,b in dict.items():
-    #             #         print(a,':',b)
 
 
 def withdraw_balance():
