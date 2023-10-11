@@ -11,3 +11,18 @@
 # result = two_sum(nums, target)
 # print(result)
 
+list3=[]
+list=[1,2,3,4,5,6]
+for i in range(len(list)):
+        for j in range(len(list)):
+            target=9
+            list2=[]
+            if list[i]+list[j]==target:
+                list2.append(list[i])
+                list2.append(list[j])
+                list3.append(list2)
+for k in list3:
+     print(k)
+# print(list3)
+            
+        
