@@ -1,9 +1,5 @@
 bank=[]
-
 Account={}
-
-# bank1 =bank.copy()
-
 dict={
         "Name" :'',
         "Address":'',
@@ -25,7 +21,7 @@ def add_account():
 
         dict['Name']=Name
         dict['Address']=Address
-        dict['Age']=Age
+        dict['Age']=Age 
         dict['Branch']=Branch
         dict['Acc_balance']=0
         dict['Acc_number']=Acc_number
@@ -49,7 +45,6 @@ def add_balance():
        for i in bank1:
             acc_no.append(i['Acc_number'])
        if b in acc_no:
-             
             for i in bank1:
                  if i['Acc_number']==b:
                   Acc_balance=i['Acc_balance']
