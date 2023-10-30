@@ -11,13 +11,13 @@ def add_student():
         Name=str(input('enter your name'))
         Address=(input('enter your address'))
         Age=str(input('enter your age'))
-        Class=int(input('enter your class'))
+        Clas=int(input('enter your class'))
         
 
         dict['Name']=Name
         dict['Address']=Address
         dict['Age']=Age
-        dict['Class']=Class
+        dict['Class']=Clas
         Std.append(dict.copy())
 
 def view_student():
@@ -29,21 +29,15 @@ def view_teacher():
            print(i)
     
 def add_teacher():
-      b=input('enter teacher name')
-      Std1=Std.copy()
-      if b in Teachers:
-            for dict in Std:
-                  dict['teacher']=b
-            Standred=[]
-            for i in Std1:
-                Standred.append(i['Class'])
-            if b in Standred:
-             for i in Std1:
-                 if i['Teacher']==b:
-                  teacher=i['teacher']
-                  i.update({"teacher":teacher})
-            else:
-             print('not found')
-
+    b=int(input('enter your S.number of teacher'))
+    a=b-1
+    x=int(input('enter the classs'))
+    
+    for i in Std:
+    #  for i in dict:
+          if i[Clas]==x:
+               print(i)
+          i[Teachers]=a
+          
         
 

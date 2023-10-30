@@ -18,6 +18,6 @@ while choice=='y' or choice=='Y':
     
     elif select=='3':
         view_teacher()
-
+    
     elif select=='4':
         add_teacher()
